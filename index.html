@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            font-family: Arial, sans-serif; /* Use Arial font */
+        }
+
+        h1 {
+            color: #007bff; /* Blue heading text */
+        }
+
+        .container {
+            max-width: 600px; /* Limit width to 600px */
+            margin: 0 auto; /* Center the container */
+            padding: 20px; /* Add padding */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Blue submit button */
+            color: #fff; /* White text */
+            cursor: pointer; /* Add pointer cursor */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light gray header background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Save and View Student Data</h1>
+        <label for="studentid">Student ID:</label><br>
+        <input type="text" name="studentid" id="studentid"><br>
+        
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" id="name"><br>
+        
+        <label for="class">Class:</label><br>
+        <input type="text" name="class" id="class"><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="text" name="age" id="age"><br>
+        
+        <br>
+        <input type="submit" id="savestudent" value="Save Student Data">
+        <p id="studentSaved"></p>
+        
+        <br>
+        <input type="submit" id="getstudents" value="View all Students">
+        <br><br>
+        <div id="showStudents">
+            <table id="studentTable">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
