@@ -3,11 +3,15 @@ import boto3
 
 def lambda_handler(event, context):
     # Initialize a DynamoDB resource object for the specified region
-    dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
+    dynamodb = boto3.resource('dynamodb', region_name='us-east-1') # change region 
 
     # Select the DynamoDB table named 'studentData'
-    table = dynamodb.Table('studentData')
-
+    table = dynamodb.Table('student_data')  #change table name 
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS, GET, POST",
+        "Access-Control-Allow-Headers": "Content-Type"
+    }
     # Scan the table to retrieve all items
     response = table.scan()
     data = response['Items']
